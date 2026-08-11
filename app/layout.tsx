@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Seu Nome — Designer independente",
-  description: "Portfólio de Seu Nome, designer independente no Brasil.",
+  title: "Daniel Nobre — Engenheiro de Software Mobile",
+  description: "Portfólio de Daniel Nobre, engenheiro de software mobile especializado em iOS, Android e React Native.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
