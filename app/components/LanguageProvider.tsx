@@ -6,12 +6,24 @@ type Language = "pt" | "en";
 
 const copy = {
   pt: {
-    nav: { home: "Início", projects: "Projetos", about: "Sobre mim", contact: "Contate-me", allProjects: "Todos os projetos", site: "Site" },
+    nav: { home: "Início", ai: "IA", projects: "Projetos", about: "Sobre mim", contact: "Contate-me", allProjects: "Todos os projetos", site: "Site" },
+    labs: {
+      title: "IA aplicada, medida",
+      intro: "Laboratórios públicos que comparam abordagens contra um gabarito, com a métrica, o custo e os limites escritos. Cada número vem do README do repositório.",
+      limits: "Limites:",
+      more: "Agentes, ferramentas e código aberto",
+    },
     card: { more: "Ver mais", comingSoon: "Em breve" },
     contact: { title: "Vamos trabalhar juntos?", cta: "Enviar e-mail", hint: "Clique direito para adicionar stickers · Arraste para mover" },
   },
   en: {
-    nav: { home: "Home", projects: "Projects", about: "About me", contact: "Contact me", allProjects: "All projects", site: "Site" },
+    nav: { home: "Home", ai: "AI", projects: "Projects", about: "About me", contact: "Contact me", allProjects: "All projects", site: "Site" },
+    labs: {
+      title: "Applied AI, measured",
+      intro: "Public labs that compare approaches against ground truth, with the metric, the cost and the limits written down. Every number comes from the repository README.",
+      limits: "Limits:",
+      more: "Agents, tooling and open source",
+    },
     card: { more: "See more", comingSoon: "Coming soon" },
     contact: { title: "Let’s work together?", cta: "Send email", hint: "Right-click to add stickers · Drag to move" },
   },

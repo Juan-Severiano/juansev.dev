@@ -3,12 +3,12 @@ import "./globals.css";
 import { LanguageProvider } from "./components/LanguageProvider";
 
 export const metadata: Metadata = {
-  title: "Francisco Juan Severiano — iOS & Full-Stack Developer",
-  description: "Desenvolvedor iOS e Full-Stack especializado em React, React Native, Swift e Node.js.",
+  title: "Francisco Juan Severiano - Engenheiro de software: IA, backend e mobile",
+  description: "Engenheiro de software com foco em IA aplicada, backend (Java, Spring Boot) e mobile (React Native, Swift). Labs públicos de IA com métrica, custo e limites.",
   metadataBase: new URL("https://juansev.dev"),
   openGraph: {
-    title: "Francisco Juan — Full-stack & native product engineering",
-    description: "Produtos nativos, mobile, web e infraestrutura de produção.",
+    title: "Francisco Juan - IA aplicada, backend e mobile",
+    description: "Labs públicos de IA com número e limites, ERP e SaaS na JVM e apps de delivery em React Native e Swift.",
     images: ["/og.png"],
   },
   twitter: { card: "summary_large_image" },

@@ -3,13 +3,58 @@ export type PortfolioProject = {
   title: string;
   image?: string;
   imageFit?: "contain";
+  overlayIcon?: string;
   visual?: "pushlab";
   tags: string[];
   description: { pt: string; en: string };
   href?: string;
 };
 
+// A ordem importa: a home mostra os 6 primeiros.
 export const portfolioProjects: PortfolioProject[] = [
+  {
+    id: "athenas-ai",
+    title: "Athenas AI",
+    image: "/images/project-assets/athenas-card.png",
+    overlayIcon: "/images/project-assets/athenas.png",
+    tags: ["RAG", "pgvector", "NestJS", "TypeScript"],
+    description: {
+      pt: "Assistente de reuniões com IA: a extensão do Chrome captura o áudio de Meet, Teams e Zoom e o chat responde com RAG (embeddings e busca vetorial em pgvector). Monorepo com API NestJS, web, app macOS em SwiftUI e pacotes de agentes, transcrição e embeddings.",
+      en: "An AI meeting assistant: a Chrome extension captures audio from Meet, Teams and Zoom and the chat answers with RAG (embeddings and pgvector search). Monorepo with a NestJS API, web app, SwiftUI macOS app and packages for agents, transcription and embeddings.",
+    },
+  },
+  {
+    id: "japediu",
+    title: "JaPediu Delivery",
+    image: "/images/juan-projects/japediu-placeholder.png",
+    tags: ["React Native", "TypeScript", "SwiftUI", "Live Activities"],
+    description: {
+      pt: "Aplicativo do cliente JaPediu para pedidos e acompanhamento de delivery, em React Native para iOS e Android, com Live Activities de rastreio de entrega em SwiftUI e releases automatizados.",
+      en: "JaPediu’s consumer ordering and delivery-tracking app, built in React Native for iOS and Android, with SwiftUI Live Activities for delivery tracking and automated release workflows.",
+    },
+    href: "https://japediudelivery.com",
+  },
+  {
+    id: "totalprod",
+    title: "Totalprod",
+    image: "/images/project-assets/totalprod.png",
+    tags: ["Grails", "Groovy", "ERP", "Docker"],
+    description: {
+      pt: "Sistema corporativo de produção e gestão comercial, com módulos de ERP, pedidos, lotes, contratos, faturamento e releases automatizados.",
+      en: "A corporate production and commercial-management system with ERP, orders, batches, contracts, invoicing and automated releases.",
+    },
+    href: "https://sistema.totalprod.com.br",
+  },
+  {
+    id: "pedidojap",
+    title: "PedidoJap",
+    image: "/images/project-assets/pedidojap.png",
+    tags: ["React Native", "Expo", "TypeScript", "CI/CD"],
+    description: {
+      pt: "Produto para parceiros do JaPediu, criado para operacionalizar pedidos e rotinas do delivery em múltiplas plataformas a partir de uma única base React Native.",
+      en: "JaPediu’s partner product, built to run delivery ordering and operational routines across platforms from one React Native codebase.",
+    },
+  },
   {
     id: "whispersnap",
     title: "WhisperSnap",
@@ -22,6 +67,16 @@ export const portfolioProjects: PortfolioProject[] = [
     },
   },
   {
+    id: "kiteasy",
+    title: "Kiteasy",
+    image: "/images/project-assets/kiteasy.jpg",
+    tags: ["NestJS", "React", "Prisma", "PostgreSQL"],
+    description: {
+      pt: "SaaS completo para gestão de escolas de esportes náuticos, com web, API, mobile para instrutores, permissões, PostgreSQL e deploy de produção.",
+      en: "A complete SaaS for watersports-school management, with web, API, instructor mobile app, permissions, PostgreSQL and production deployment.",
+    },
+  },
+  {
     id: "stash",
     title: "Stash",
     image: "/images/project-assets/stash-card.png",
@@ -31,6 +86,7 @@ export const portfolioProjects: PortfolioProject[] = [
       pt: "Utilitário nativo para macOS que organiza histórico de clipboard e screenshots, com atalhos globais, filtros de conteúdo sensível e armazenamento local.",
       en: "A native macOS utility that organizes clipboard history and screenshots, with global shortcuts, sensitive-content filtering and local storage.",
     },
+    href: "https://github.com/Juan-Severiano/Stash",
   },
   {
     id: "pushlab",
@@ -44,38 +100,6 @@ export const portfolioProjects: PortfolioProject[] = [
     href: "https://github.com/Juan-Severiano/PushLab",
   },
   {
-    id: "athenas-ai",
-    title: "Athenas AI",
-    image: "/images/project-assets/athenas-card.png",
-    overlayIcon: "/images/project-assets/athenas.png",
-    tags: ["TypeScript", "AI", "Monorepo", "NestJS"],
-    description: {
-      pt: "Ecossistema de IA em monorepo: web, admin, extensão, app desktop e API, reunindo workspaces, equipes, reuniões, skills, MCPs e métricas de uso.",
-      en: "An AI monorepo ecosystem spanning web, admin, extension, desktop app and API for workspaces, teams, meetings, skills, MCPs and usage insights.",
-    },
-  },
-  {
-    id: "japediu",
-    title: "JaPediu Delivery",
-    image: "/images/juan-projects/japediu-placeholder.png",
-    tags: ["React Native", "TypeScript", "iOS", "Android"],
-    description: {
-      pt: "Aplicativo do cliente JaPediu para pedidos e acompanhamento de delivery, desenvolvido em React Native para iOS e Android com releases automatizados.",
-      en: "JaPediu’s consumer ordering and delivery-tracking app, built in React Native for iOS and Android with automated release workflows.",
-    },
-    href: "https://japediudelivery.com",
-  },
-  {
-    id: "pedidojap",
-    title: "PedidoJap",
-    image: "/images/project-assets/pedidojap.png",
-    tags: ["React Native", "Expo", "TypeScript", "CI/CD"],
-    description: {
-      pt: "Produto para parceiros do JaPediu, criado para operacionalizar pedidos e rotinas do delivery em múltiplas plataformas a partir de uma única base React Native.",
-      en: "JaPediu’s partner product, built to run delivery ordering and operational routines across platforms from one React Native codebase.",
-    },
-  },
-  {
     id: "japediu-express",
     title: "JaPediu Express",
     image: "/images/project-assets/japexpress.png",
@@ -83,16 +107,6 @@ export const portfolioProjects: PortfolioProject[] = [
     description: {
       pt: "Serviço expresso do ecossistema JaPediu: interface web e API com autenticação JWT, documentação, banco MySQL em Docker e automação de deploy.",
       en: "JaPediu’s express-delivery service: web interface and API with JWT authentication, documentation, Dockerized MySQL and automated deployment.",
-    },
-  },
-  {
-    id: "kiteasy",
-    title: "Kiteasy",
-    image: "/images/project-assets/kiteasy.jpg",
-    tags: ["NestJS", "React", "Prisma", "PostgreSQL"],
-    description: {
-      pt: "SaaS completo para gestão de escolas de esportes náuticos, com web, API, mobile para instrutores, permissões, PostgreSQL e deploy de produção.",
-      en: "A complete SaaS for watersports-school management, with web, API, instructor mobile app, permissions, PostgreSQL and production deployment.",
     },
   },
   {
@@ -114,17 +128,6 @@ export const portfolioProjects: PortfolioProject[] = [
       pt: "IDE mobile para criar, organizar e editar arquivos de projetos embarcados, com workspace, editor e suporte ao ecossistema de microcontroladores.",
       en: "A mobile IDE for creating, organizing and editing embedded-project files, with a workspace, editor and microcontroller ecosystem support.",
     },
-  },
-  {
-    id: "totalprod",
-    title: "Totalprod",
-    image: "/images/project-assets/totalprod.png",
-    tags: ["Grails", "Groovy", "ERP", "Docker"],
-    description: {
-      pt: "Sistema corporativo de produção e gestão comercial, com módulos de ERP, pedidos, lotes, contratos, faturamento e releases automatizados.",
-      en: "A corporate production and commercial-management system with ERP, orders, batches, contracts, invoicing and automated releases.",
-    },
-    href: "https://sistema.totalprod.com.br",
   },
 ];
 
